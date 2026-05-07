@@ -6,11 +6,12 @@
   "spacing": 4,
   // Modules on the left side of the bar
   "modules-left": [
-    "clock"
+    "hyprland/workspaces"
   ],
   // Modules at the center of the bar
   "modules-center": [
-    "hyprland/workspaces"
+    "clock",
+    "clock#cl2"
   ],
   // Modules on the right side of the bar
   "modules-right": [
@@ -21,12 +22,6 @@
     "tray",
     "battery"
   ],
-  "clock": {
-    "interval": 1,
-    "timezone": "Europe/Brussels",
-    "tooltip-format": "{:%d/%m/%Y}",
-    "format-alt": "{:%H:%M:%S}"
-  },
   "workspaces": {
     "format": "{name}",
     "on-click": "hyprctl dispatch workspace {name}",
@@ -35,8 +30,39 @@
     "persistent-workspace": false,
     "sort-by-number": true
   },
+  "clock": {
+    "format": "{:%R}",
+    "interval": 1,
+    "format-alt": "{:%H:%M:%S}",
+    "tooltip": false,
+  },
+  "clock#cl2": {
+    "format": "{:%d %B %Y}",
+    "format-alt": "{:%d/%m/%Y}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+                "mode"          : "year",
+                "mode-mon-col"  : 3,
+                "on-scroll"     : 1,
+                "on-click-right": "mode",
+                "format": {
+                          "months":     "<span color='#7aa2f7'><b>{}</b></span>",
+                          "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+                          
+                          "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                          "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+                  }
+    },
+    "actions":  {
+        "on-click-right": "mode",
+        "on-scroll-up": "shift_up",
+        "on-click-middle": "shift_reset",
+        "on-scroll-down": "shift_down"
+    },
+  },
   "pulseaudio": {
-    "scroll-step": 0.5,
+    "max-volume": 200,
+    "scroll-step": 1,
     "format": "{volume}% {icon} {format_source}",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
@@ -45,11 +71,6 @@
         "format-source-muted": "",
         "format-icons": {
             "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
             "default": ["", "", ""]
         },
         "on-click": "pavucontrol"
@@ -80,7 +101,7 @@
     "spacing": 5
   },
   "battery": {
-    "interval": 30,
+    "interval": 60,
     "format": "{icon} {capacity}%",
     "format-charging": "  {capacity}%",
     "format-plugged": "  {capacity}%",
