@@ -3,7 +3,7 @@
   "position": "top",
   "height": 30,
   //Gaps between modules
-  "spacing": 4,
+  "spacing": 2,
   // Modules on the left side of the bar
   "modules-left": [
     "hyprland/workspaces"
@@ -93,11 +93,10 @@
     "format-wifi": "{essid} {signalStrength}%",
     "format-ethernet": "{ipaddr}",
     "format-disconnected": "⚠ Disconnected",
-    "tooltip": true,
-    "tooltip-format": "Download: {bandwidthDownBits} ↓\nUpload: {bandwidthUpBits} ↑",
+    "tooltip": false,
   },
   "tray": {
-    "icon-size": 16,
+    "icon-size": 20,
     "spacing": 5
   },
   "battery": {

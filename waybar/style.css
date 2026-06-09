@@ -25,13 +25,12 @@ window#waybar {
   background: transparent;
   color: white;
   text-shadow: 1px 1px 2px black;
-  padding: 4px 6px;
-  border-radius: 6px;
+  padding: 2px 6px;
+  border-radius: 0px;
   transition: background 0.2s ease;
 }
 
 #workspaces button.active {
-  /* border-bottom: 2px solid white; */
   text-shadow: 2px 2px 0px white, 1px 1px 2px black;
 }
 
@@ -50,15 +49,15 @@ tooltip {
   background: rgba(40, 40, 40, 0.95);
   color: white;
   border: 1px solid rgba(200, 200, 200, 0.95);
-  padding: 6px;
-  border-radius: 6px;
+  padding: 4px;
+  border-radius: 0px;
 }
 
 #backlight-slider {
   color: white;
   padding: 0 8px;
   margin: 0 6px;
-  border-radius: 6px;
+  border-radius: 0px;
   background: transparent;
   transition: background 0.2s ease;
   min-width: 70px;
@@ -66,13 +65,13 @@ tooltip {
 
 #backlight-slider trough {
   min-height: 4px;
-  border-radius: 3px;
+  border-radius: 0px;
   background: rgba(255, 255, 255, 0.2);
 }
 
 #backlight-slider highlight {
   background-color: white;
-  border-radius: 3px;
+  border-radius: 0px;
 }
 
 #backlight-slider slider {
