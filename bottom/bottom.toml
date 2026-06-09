@@ -138,7 +138,7 @@ network_legend = "top-left"
 columns = ["PID", "Name", "CPU%", "Mem%", "GPU%", "GMem%", "R/s", "W/s", "T.Read", "T.Write", "Time", "Priority", "Nice", "State", "User"]
 
 # Gather process child thread information
-get_threads = true
+# get_threads = true
 
 
 # CPU widget configuration
