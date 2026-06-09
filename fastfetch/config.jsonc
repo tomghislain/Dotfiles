@@ -1,0 +1,47 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "logo": {
+    "source": "arch3"
+  },
+  "display": {
+    "separator": "  ",
+    "constants": [
+      "─────────────────" // {$1}, used in custom modules
+    ],
+    "key": {
+      "type": "icon", 
+    },
+    "percent": {
+      "type": 1,
+    },
+  },
+  "modules": [
+    // Software
+    {
+      "type": "custom",
+      "format": "┌{$1} {#1}Software Information{#} {$1}┐"
+    },
+    "os",
+    "kernel",
+    "wm",
+    "terminal",
+    "terminalfont",
+    "shell",
+    "packages",
+    {
+      "type": "custom",
+      "format": "├{$1} {#1}Hardware Information{#} {$1}┤"
+    },
+    "host",
+    "cpu",
+    "gpu",
+    "memory",
+    "swap",
+    "disk",
+    {
+      "type": "custom",
+      "format": "└{$1}──────────────────────{$1}┘"
+    },
+    "colors",
+  ]
+}
